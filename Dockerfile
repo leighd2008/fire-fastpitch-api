@@ -1,6 +1,6 @@
 FROM node:alpine
 
-WORKDIR /usr/src/buckeye-charge-api
+WORKDIR /usr/src/fire-fastpitch-api
 
 COPY ./ ./
 

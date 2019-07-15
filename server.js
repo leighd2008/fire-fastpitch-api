@@ -11,16 +11,16 @@ const tournaments = require('./controllers/tournaments');
 
 const teamData = knex({
   client: 'pg',
-  connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'postgres',
-    database : 'buckeye-charge'
-  }
+  connection: process.env.POSTGRES_URI
+  // {
+  //   host : '127.0.0.1',
+  //   user : 'postgres',
+  //   password : 'postgres',
+  //   database : 'fire-fastpitch'
+  // }
 });
 
 const app = express();
-console.log('hmmm?');
 app.use(morgan('combined'));
 app.use(cors());
 
